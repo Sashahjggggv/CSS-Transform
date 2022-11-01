@@ -1,0 +1,202 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+:focus, :active {
+  outline: none;
+}
+
+a:focus, a:active {
+  outline: none;
+}
+
+nav, footer, header, aside {
+  display: block;
+}
+
+html, body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a, a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+.wrapper {
+  padding: 20px;
+  background: rgb(43, 43, 43);
+  color: #fff;
+}
+
+.header {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.value {
+  width: 50%;
+  min-width: 250px;
+}
+.value__title {
+  font-size: 20px;
+  margin: 20px 0;
+  font-weight: 600;
+  text-transform: capitalize;
+}
+.value__block {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  background: rgb(83, 83, 134);
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 20px;
+  font-weight: 500;
+}
+.value__notes {
+  margin: 50px 10px;
+  text-align: center;
+  font-size: 16px;
+}
+
+.translate {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+.translate:hover {
+  transform: translate(-50%, 20px);
+}
+
+.scale {
+  transform: scale(1.5, 1);
+}
+.scale:hover {
+  transform: scale(-1, 1);
+}
+
+.rotate {
+  /* за годинниковою стрілкою */
+  transform: rotate(45deg);
+}
+.rotate:hover {
+  transform: rotate(410deg);
+}
+
+.skew {
+  transform: skewX(-20deg);
+}
+.skew:hover {
+  transform: skewY(20deg);
+}
+
+.matrix {
+  /* transform: matrix(scaleX, skewY, skewX, scaleY, translateX, translateY); */
+  /* значення без одиниць вимірювань */
+  transform: matrix(0.5, 0, 0.1, 0.5, 20, 20);
+}
+
+.multy-transform:hover {
+  transform: translate(20px, 0) scale(1.5) rotate(20deg);
+}
+
+.transform-origin {
+  transform-origin: 100% 100%;
+  transform: rotate(30deg);
+  transform-origin: 0 0;
+  transform: rotate(-45deg);
+}
+
+.perspective {
+  width: 150px;
+  height: 150px;
+}
+.perspective__element {
+  width: 100%;
+  height: 100%;
+  transform: perspective(400px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.translate3d {
+  transform: translate3D(20px, 20px, 50px);
+}
+
+.scale3d {
+  transform: scale3d(1, 1, 2);
+}
+
+.rotate3d {
+  transform: rotate3d(0, 0, 1, 45deg);
+}
+
+.multy-3d-transform {
+  transform: translate3d(20px, 20px, 50px) rotate3d(1, 1, 1, 45deg) scale3d(1, 1, 2);
+}
+
+.transform-style {
+  background: rgba(255, 255, 255, 0.2);
+  transform-style: preserve-3d;
+}
+.transform-style div:hover {
+  transform: perspective(400px);
+}
